@@ -96,7 +96,7 @@ class BilingualDataset(Dataset):
     }
 
 def get_ds(config):
-  ds_raw = load_dataset('Helsinki-NLP/opus_books',f"{config['lang_src']}-{config['lang_tgt']}",split='train',)
+  ds_raw = load_dataset('Helsinki-NLP/opus_books',f"{config['lang_src']}-{config['lang_tgt']}",split='train',) #Dataset which is Helsinki-NLP/opus_books
 
   tokenizer_src = build_tokenizer(config, ds_raw, config['lang_src'])
   tokenizer_tgt = build_tokenizer(config, ds_raw, config['lang_tgt'])
